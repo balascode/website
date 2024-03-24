@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+        
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Connect</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div id="sectionHome">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#"> Culture Connect </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAlt" aria-controls="navbarNavAlt" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAlt">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" href="#heritage-tours"> Heritage Tours  <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#cultural-exploration"> Cultural Exploration </a>
+          <a class="nav-link" href="#architecture"> Architecture in art and culture </a>
+
+            <a class="nav-item mb-2 ml-2">
+              <button id="signup-button" class="btn btn-outline-light">Sign Up</button>
+            </a>
+            <a class="nav-item">
+            <form class="form-inline" role="search">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          </form>
+          </a>
+          </div>
+        </div>
+  </nav>
+  </header>
+  <main>
+      <!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header border-bottom-0">
+      <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <span aria-hidden="true">&times;</span>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+<p class="mt-3">Already a user? <a href="#" id="loginLink">Login</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Login Modal -->
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header border-bottom-0">
+      <h5 class="modal-title" id="loginModalLabel">Login</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="loginUsername">Username</label>
+          <input type="text" class="form-control" id="loginUsername" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Login</button>
+<p class="mt-3">Already a user? <a href="#" id="signupLink">SignUp</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+
+      <!-- Main content goes here -->
+  </main>
+
+      <div class="container">
+    <div class="row p-2 mt-4">
+        <div class="col-12 mb-4 bg-vc" style="background-color: #cceded;" id="heritage-tours">
+          <h1 class="vc-head">Heritage Tours</h1>
+          <div class="d-flex flex-row">
+          <div id="carouselIndicators" class="vt-img carousel slide m-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.savaari.com/blog/wp-content/uploads/2022/11/Konark-Sun-Temple-Wheel.webp" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://blog.thomascook.in/wp-content/uploads/2015/09/Picture118.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.tourism-of-india.com/blog/wp-content/uploads/2017/06/cultural-cities-in-india-750x430.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="https://static.toiimg.com/photo/78189002.cms" class="d-block vt-img" alt="..." />
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="ml-4 mt-2">
+          <p class="hp">
+            Heritage tours of art and culture in India offer a rich tapestry of experiences that delve into the country's vibrant history, diverse traditions, and artistic expressions. Here are some unique points about these tours:
+          </p>
+          <ol class="hp">
+            <li> Hidden Gems </li>
+            <li> Regional Diversity </li>
+            <li> Spiritual Journeys </li>
+            <li> Culinary Experiences  </li>
+            <li> Sustainable Tourism Initiatives </li>
+          </ol>
+          <div onclick="display('sectionVact')">
+            <button class="btn btn-dark"> Explore </button>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-12 mb-4 bg-vc" id="cultural-exploration">
+           <h1 class="vc-head">Cultural Exploration</h1>
+           <div class="d-flex flex-row">
+          <div id="carouselExampleIndicators" class="vt-img carousel slide m-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Chhau_dance.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.filecdn.in/755esias/collage-folk-1680776121496.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i0.wp.com/avidipta.art/wp-content/uploads/2023/03/Pattachitra-PaintingIndian-Folk-Art-1.jpg?fit=890%2C678&amp;ssl=1" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="https://static.prepp.in/public/image/7ba6aebdd6145e5fdb29b9d2bb91d6f4.png?tr=w-512,h-340,c-force" class="d-block vt-img" alt="..." />
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="ml-4 mt-2">
+          <p class="hp">
+            Cultural exploration offers a profound opportunity to immerse oneself in the diverse tapestry of human experiences, traditions, and ways of life. Here are some unique points about cultural exploration:
+          </p>
+          <ol class="hp">
+            <li> You can explore many art forms and cultural programs </li>
+            <li> You can contact them and Hire them </li>
+            <li> You can buy the products of various Arts </li>
+          </ol>
+          <div onclick="display('sectioncult')">
+            <button class="btn btn-dark"> Want To Gain knowledge About Art And Culture Of India ? </button>
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="col-12 mb-4 bg-vc" style="background-color: #cceded;" id="architecture">
+          <h1 class="vc-head"> Architecture in Art and Culture </h1>
+          <div class="d-flex flex-row">
+         <div id="carouselExampleIndicators1" class="vt-img carousel slide m-2" data-ride="carousel">
+           <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+           </ol>
+           <div class="carousel-inner">
+               <div class="carousel-item active">
+                   <img src="https://bep-wordpress.byjusexamprep.com/wp-content/uploads/2023/02/17143146/Court-Art-and-Architecture.jpg" class="d-block vt-img" alt="..." />
+               </div>
+               <div class="carousel-item">
+                   <img src="https://i.pinimg.com/736x/82/79/8a/82798a237c069afc41873663c139a519.jpg" class="d-block vt-img" alt="..." />
+               </div>
+               <div class="carousel-item">
+                   <img src="https://i0.wp.com/www.re-thinkingthefuture.com/wp-content/uploads/2020/10/A1865-Sustainable-practices-in-traditional-ancient-Indian-architecture-Image-5.jpg?w=999" class="d-block vt-img" alt="..." />
+               </div>
+           </div>
+           <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+           </a>
+           <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+           </a>
+       </div>
+       <div class="ml-4 mt-2">
+        <p class="hp">
+          Ancient architecture is a testament to human ingenuity, creativity, and craftsmanship, reflecting the cultural, social, and technological advancements of civilizations past. Here are some unique points about ancient architecture:       
+         </p>
+        <ol class="hp">
+          <li> You can construct the modern constructions using ancient architecture </li>
+          <li> You can gain knowledge about how the acient architecture is built </li>
+          <li> You will get know the creativity in the ancient architecture </li>
+        </ol>
+        <div onclick="display('sectionarch')">
+          <button class="btn btn-dark"> Want To Get Closer To Ancient Architecture ? </button>
+        </div>
+      </div>
+       </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  
+
+
+<script>
+$(document).ready(function() {
+  // Trigger the signup modal when the signup button is clicked
+  $('#signup-button').click(function() {
+      $('#signupModal').modal('show');
+  });
+
+  // Trigger the login modal when the login link is clicked and close the signup modal
+  $('a[data-bs-toggle="modal"][data-bs-target="#loginModal"]').click(function() {
+      $('#signupModal').modal('hide');
+      setTimeout(function() {
+          $('#loginModal').modal('show');
+      }, 400); // Delay to allow the signup modal to close
+  });
+});
+$('#loginLink').click(function() {
+  $('#signupModal').modal('hide');
+  setTimeout(function() {
+      $('#loginModal').modal('show');
+  }, 400); // Delay to allow the signup modal to close
+});
+$('#signupLink').click(function() {
+  $('#loginModal').modal('hide');
+  setTimeout(function() {
+      $('#signupModal').modal('show');
+  }, 400); // Delay to allow the signup modal to close
+});
+</script>
+
+  <footer>
+      <p>Contact us: artsquare@email.com</p>
+  </footer>
+</div> 
+
+
+
+<div id="sectionVt">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#" onclick="display('sectionHome')"> Culture Connect </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAlt1" aria-controls="navbarNavAlt1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAlt1">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" href="#heritage-tours"> Heritage Tours  <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#cultural-exploration"> Cultural Exploration </a>
+          <a class="nav-link" href="#architecture"> Architecture in art and culture </a>
+             <form role="search">
+               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+             </form>
+          </div>
+        </div>
+  </nav>
+  </header>
+
+
+        <div id="content">
+    <div class="container my-5">
+            <div class="jumbotron">
+                <h1 class="display-4">Submit Your Information</h1>
+                <p class="lead">Please fill out the form below.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Enter location">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estimatedCost" class="form-label">Estimated Cost</label>
+                        <input type="number" class="form-control" id="estimatedCost" placeholder="Enter estimated cost">
+                    </div>
+                    <div class="mb-3">
+                        <label for="transportationFacility" class="form-label">Transportation Facility</label>
+                        <input type="text" class="form-control" id="transportationFacility" placeholder="Enter transportation facility">
+                    </div>
+                    <div class="mb-3">
+                        <label for="photos" class="form-label">Photos</label>
+                        <input type="file" class="form-control" id="photos" multiple>
+                    </div>
+                    <div class="mb-3">
+                        <label for="videos" class="form-label">Videos</label>
+                        <input type="file" class="form-control" id="videos" multiple>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="timings" class="form-label">Timings etc</label>
+                        <input type="text" class="form-control" id="timings" placeholder="Enter timings">
+                    </div>
+                    <div class="d-flex flex-row justify-content-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary ml-2" onclick="display('sectionVact')"> Back </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+        <footer>
+            <p>Contact us: artsquare@email.com</p>
+        </footer>
+</div>
+
+
+<div id="sectionVact">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand mb-2" href="#" onclick="display('sectionHome')">Culture Connect</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAlt2" aria-controls="navbarNavAlt2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAlt2">
+            <div class="navbar-nav ml-auto">
+                <div class="dropdown mb-2">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        States
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#valleyz">Arunachal Pradesh</a>
+                      <a class="dropdown-item" href="#vlpt"> Tamil Nadu </a>
+                      <a class="dropdown-item" href="#bhimmad"> Madhya Pradesh </a>
+                      <a class="dropdown-item" href="#"> Jharkhand </a>
+                      <a class="dropdown-item" href="#"> Bihar </a>
+                      <a class="dropdown-item" href="#"> Kerala </a>
+                      <a class="dropdown-item" href="#"> Andhra Pradesh </a>
+                      <a class="dropdown-item" href="#"> Telangana </a>  
+                      <a class="dropdown-item" href="#"> Gujarat </a>
+                      <a class="dropdown-item" href="#"> Chandigarh </a>
+                    </div>
+                </div>
+                <a class="nav-item">
+                <form class="form-inline ml-2 mb-3" role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <div class="mt-3 mb-2">
+      <h1 class="head-m"> Welcome to Heritage Tours </h1>
+    </div>
+
+
+      <div class="container-fluid">
+    <div class="row p-2 mt-4">
+        <div id="valleyz" class="col-12 mb-4 p-3 bg-vc">
+          <h1 class="vc-head"> Ziro Valley - Arunachal Pradesh </h1>
+          <div class="d-flex flex-row">
+          <div id="carouselIndicators1" class="vt-img carousel slide mr-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselIndicators1" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselIndicators1" data-slide-to="1"></li>
+                <li data-target="#carouselIndicators1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.arunachalwings.com/wp-content/uploads/2022/10/308638413_1973384936197886_8688830465850494811_n-1024x640.webp" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://static.toiimg.com/thumb/msid-93612213,width-1070,height-580,resizemode-75/93612213,pt-32,y_pad-40/93612213.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.mytrip-to-india.com/wp-content/uploads/2022/09/ziro-arunachal-pradesh-1024x585.jpg" class="d-block vt-img" alt="..." />
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselIndicators1" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselIndicators1" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div>
+          <div>
+            <p>
+              Ziro Valley, located in the Lower Subansiri district of Arunachal Pradesh, India, is a hidden gem that offers unique experiences to travelers. Here are some lesser-known facts and exciting points to visit in Ziro Valley:
+            </p>
+            <ol>
+              <li> Aptani Tribe </li>
+              <li> Pine Ridge </li>
+              <li> Ziro Music Festival </li>
+              <li> Talley Valley wildlife Sanctuary </li>
+              <li> Handicrafts and Handloom</li>
+            </ol>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary mr-2" onclick="display('sectionVt')"> Review </button>
+            <button class="btn btn-success" onclick="display('sectionZir')"> Want to visit me ? </button>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+        <div id="vlpt" class="col-12 mb-4 p-3 bg-vc" style="background-color: #cceded;">
+           <h1 class="vc-head">Valparai - Tamil Nadu</h1>
+           <div class="d-flex flex-row">
+          <div id="carouselExampleIndicators2" class="vt-img carousel slide mr-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.luxurytrailsofindia.com/wp-content/uploads/2017/08/valparai-tamil-nadu.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/08/30074802/VALPARAI-FEATURE-compressed-686x400.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/08/30074802/VALPARAI-FEATURE-compressed-686x400.jpg" class="d-block vt-img" alt="..." />
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div>
+          <div>
+            <p>
+              Valparai, located in the Coimbatore district of Tamil Nadu, is a picturesque hill station nestled in the Anaimalai Hills of the Western Ghats. Here are some unique points and exciting places to visit in Valparai:
+            </p>
+            <ol>
+              <li> Tea Estates </li>
+              <li> Sholayar Dam</li>
+              <li> Grass hills</li>
+              <li> Chinnakallar Falls </li>
+              <li> Monkey Falls </li>
+            </ol>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <button class="btn btn-primary mr-2" onclick="display('sectionVt')"> Review </button>
+            <button class="btn btn-success" onclick="display('sectionValpar')"> Want to visit me ? </button>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div id="bhimmad" class="col-12 mb-4 p-3 bg-vc">
+          <h1 class="vc-head"> Bhimbetka Rock Shelters - Madhya Pradesh </h1>
+          <div class="d-flex flex-row">
+         <div id="carouselExampleIndicators3" class="vt-img carousel slide mr-2" data-ride="carousel">
+           <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
+           </ol>
+           <div class="carousel-inner">
+               <div class="carousel-item active">
+                   <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/29/5abcbc5853a6d8be3ec9967749f36fde_1000x1000.jpg" class="d-block vt-img" alt="..." />
+               </div>
+               <div class="carousel-item">
+                   <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Bhimbetka-Rock-Shelters_600.jpg" class="d-block vt-img" alt="..." />
+               </div>
+               <div class="carousel-item">
+                   <img src="https://www.seawatersports.com/img/newimage/places/bhimbetka-rock-shelters.png" class="d-block vt-img" alt="..." />
+               </div>
+           </div>
+           <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+           </a>
+           <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+           </a>
+       </div>
+       <div>
+        <div>
+          <p> 
+            Bhimbetka Rock Shelters in Madhya Pradesh is a UNESCO World Heritage Site renowned for its rich archaeological significance and captivating rock art. Here are some lesser-known facts and exciting points about Bhimbetka:
+          </p>
+          <ol>
+            <li> Artistic Diversity </li>
+            <li> Continued Cultural Significance </li>
+            <li> Cave Dwellings and Rock Formations </li>
+            <li> The rock shelters at Bhimbetka have a history spanning over 30,000 years </li>
+            <li> It's Connection to Hindu Mythology </li>
+          </ol>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+          <button class="btn btn-primary mr-2" onclick="display('sectionVt')"> Review </button>
+          <button class="btn btn-success" onclick="display('Sectionbhumbek')"> Want to visit me ? </button>
+        </div>
+      </div>
+       </div>
+       </div>
+
+
+    </div>
+ </div>
+
+ <div class="text-center mb-5">
+  <button class="btn btn-info" onclick="display('sectionHome')"> Back </button>
+ </div>
+
+  <footer class="mt-4">
+      <p> Contact us: artsquare@email.com </p>
+  </footer>
+</div> 
+
+
+<div id="sectionZir">
+     <h1 class="head-m mt-3 mb-3"> Ziro Valley - Arunachal pradesh </h1>
+     <div class="bg-vc">
+          <div class="d-flex flex-row">
+          <div>
+          <div id="carouselIndicators4" class="vt-img carousel slide mr-2 mb-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselIndicators4" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselIndicators4" data-slide-to="1"></li>
+                <li data-target="#carouselIndicators4" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.arunachalwings.com/wp-content/uploads/2022/10/308638413_1973384936197886_8688830465850494811_n-1024x640.webp" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://static.toiimg.com/thumb/msid-93612213,width-1070,height-580,resizemode-75/93612213,pt-32,y_pad-40/93612213.jpg" class="d-block vt-img" alt="..." />
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.mytrip-to-india.com/wp-content/uploads/2022/09/ziro-arunachal-pradesh-1024x585.jpg" class="d-block vt-img" alt="..." />
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselIndicators4" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselIndicators4" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="d-flex flex-row">
+        <p style="color:black; font-size:16px; font-style:italic;" class="mr-3"> Find me here </p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp"/>
+        </div>
+        </div>
+
+        <div>
+          <div class="ml-3">
+            <p class="zh mb-2">
+              Ziro Valley, located in the Lower Subansiri district of Arunachal Pradesh, India, is a hidden gem that offers unique experiences to travelers. Here are some lesser-known facts and exciting points to visit in Ziro Valley:
+            </p>
+            <ol>
+              <div class="d-flex flex-row">
+              <div class="zh mr-4" style="font-size: 19px;">
+              <li> Aptani Tribe </li>
+              <li> Pine Ridge </li>
+              <li> Ziro Music Festival </li>
+              <li> Tarin Fish Farm </li>
+              <li> Meghna Cave Temple </li> 
+              </div>
+              <div class="zh ml-4" style="font-size: 19px;">
+              <li> Talley Valley wildlife Sanctuary </li>
+              <li> Handicrafts and Handloom</li>
+              <li> Paddy cum fish culture: </li>
+              <li> Hiking and Trekking Trails: </li> 
+              <li> Hospitality and Homestays:</li> 
+              </div>
+              </div>
+            </ol>
+          </div>
+      </div>
+     </div>
+
+    <div>
+       <h1 class="zh">1. Apatani Tribe: </h1> 
+       <p class="zp">Ziro Valley is home to the Apatani tribe, one of the most unique tribes in India known for their distinctive facial tattoos and nose plugs. Unlike many other tribes in the region, the Apatani traditionally practiced wet rice cultivation in intricately designed terraced fields.
+       </p>
+       <h1 class="zh">2. Pine Ridge: </h1> 
+       <p class="zp">The Pine Ridge area in Ziro is a breathtaking location offering panoramic views of the entire valley. It's an ideal spot for nature lovers and photographers, especially during sunrise and sunset.
+       </p>
+       <h1 class="zh">3.Ziro Music Festival:</h1>
+       <p class="zp">Ziro Valley hosts the Ziro Music Festival annually, attracting music enthusiasts from all over the world. The festival showcases a blend of indie, folk, and tribal music against the stunning backdrop of the valley, making it a must-visit for music lovers.
+       </p>
+       <h1 class="zh">4.Tarin Fish Farm:</h1> 
+       <p class="zp">Tarin Fish Farm is a lesser-known attraction in Ziro Valley where visitors can witness the traditional fish farming methods of the Apatani tribe. It's a serene place surrounded by lush greenery and offers insights into the local agricultural practices.
+       </p>
+       <h1 class="zh">5.Meghna Cave Temple:</h1>
+       <p class="zp"> Meghna Cave Temple, also known as Midey, is a hidden gem located amidst dense forests near Ziro. The cave houses ancient rock carvings and is believed to be a sacred site by the local tribes.
+       </p>
+       <h1 class="zh">6.Talley Valley Wildlife Sanctuary:</h1>  
+       <p class="zp">While not directly in Ziro Valley, Talley Valley Wildlife Sanctuary is nearby and offers a rich biodiversity with rare species of flora and fauna. Visitors can explore the pristine forests, streams, and meadows while trekking through the sanctuary.
+       </p>
+       <h1 class="zh">7.Handicrafts and Handloom: </h1> 
+       <p class="zp">Ziro Valley is renowned for its traditional handicrafts and handloom products. Visitors can explore local markets to buy intricately woven textiles, bamboo products, and handmade jewelry, providing an opportunity to support the local artisans.
+       </p>
+       <h1 class="zh">8.Paddy cum fish culture: </h1>
+       <p class="zp"> A unique aspect of agriculture in Ziro Valley is the traditional practice of paddy cum fish culture. The Apatani tribe ingeniously rear fish in the rice fields, creating a sustainable ecosystem that enhances both rice cultivation and fish farming.
+       </p>
+       <h1 class="zh">9.Hiking and Trekking Trails: </h1> 
+       <p class="zp">Ziro Valley offers numerous hiking and trekking trails for adventure enthusiasts. From short hikes to nearby villages to challenging treks to higher altitudes, there's something for everyone to explore the natural beauty of the valley.
+       </p>
+       <h1 class="zh">10.Hospitality and Homestays:</h1> 
+       <p class="zp">Experience the warm hospitality of the Apatani people by staying in traditional homestays. It provides an authentic cultural experience, allowing visitors to immerse themselves in the local way of life and cuisine.
+      </p>
+    </div>
+    <div class="d-flex flex-row justify-content-center">
+    <button class="btn btn-info" onclick="display('sectionVact')"> Back </button>
+    </div>
+</div>
+</div>
+
+<div id="sectionValpar">
+
+</div>
+
+<div id="Sectionbhumbek">
+
+</div>
+
+<div id="sectioncult">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand mb-2" href="#" onclick="display('sectionHome')">Culture Connect</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAlt3" aria-controls="navbarNavAlt3" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAlt3">
+            <div class="navbar-nav ml-auto">
+                <div class="dropdown mb-2">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Art forms
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#Cheraw"> Cheraw Dance </a>
+                        <a class="dropdown-item" href="#thol"> Tholpavakoothu </a>
+                        <a class="dropdown-item" href="#Madhubani"> Madhubani Painting </a>
+                        <a class="dropdown-item" href="#Bagru"> Bagru Prints </a>
+                        <a class="dropdown-item" href="#Warli"> Warli Painting </a>
+                        <a class="dropdown-item" href="#Lac"> Lac bangles </a>
+                    </div>
+                </div>
+                <div class="dropdown ml-2 mb-2">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cultural Practices
+                  </button>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#Ayurveda"> Ayurveda </a>
+                      <a class="dropdown-item" href="#Vedas"> Vedas and Scriptures </a>
+                      <a class="dropdown-item" href="#Rituals"> Vedic Rituals and Ceremonies </a>
+                      <a class="dropdown-item" href="#Yajnas"> Yajnas and Sacrifices </a>
+                      <a class="dropdown-item" href="#Sanskrit"> Sanskrit Language and Literature </a>
+                      <a class="dropdown-item" href="#Gurukul"> Gurukul Education System </a>
+                  </div>
+              </div>
+              <a class="nav-item">
+                <form class="form-inline ml-2 mb-2" role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+              </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+  <h1 class="head-m mt-3 mb-3">CULTURAL EXPLORATION</h1>
+
+<div class="bg-cc mt-5 mb-3">
+<div class="mt-2 mb-2">
+<h1 class="culh"> Art Forms : </h1>
+</div>
+<div class="d-flex flex-row justify-content-center">
+
+  <div id="Cheraw" class="cult-bg mb-3">
+    <h1 class="hc">Cheraw Dance</h1>
+    <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+      <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/BRb89Vs0c4w?rel=0"></iframe>
+    </div>
+    <p class="card-text zp">The traditional mass bamboo dance of Mizoram<br></p>
+    <div class="collapse" id="collapseContentclt">
+      <p class="zp">
+        STATE : Mizoram<br>
+        EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+      </p>
+      <div class="d-flex flex-row justify-content-center mb-2">
+        <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+        <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+      </div>
+    </div>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt" aria-expanded="false" aria-controls="collapseContentclt">
+      Read More
+    </button>
+  </div>
+  
+  <div id="thol" class="cult-bg ml-3 mb-3">
+    <h1 class="hc"> Tholpavakoothu </h1>
+    <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+      <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/CKWHk5s4nW8?rel=0"></iframe>
+    </div>
+    <p class="card-text zp">  The shadow puppetry of Kerala emerged out of the shadows <br></p>
+    <div class="collapse" id="collapseContentclt2">
+      <p  class="zp">
+        STATE : Kerala <br>
+        EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+      </p>
+      <div class="d-flex flex-row justify-content-center mb-2">
+        <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+        <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+      </div>
+    </div>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt2" aria-expanded="false" aria-controls="collapseContentclt2">
+      Read More
+    </button>
+  </div>
+
+  <div id="Madhubani" class="cult-bg ml-3 mb-3">
+    <h1 class="hc"> Madhubani Painting </h1>
+    <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+      <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/HnogMBNBvCs?rel=0"></iframe>
+    </div>
+    <p class="card-text zp"> A unique Art Painting | The Indianness <br></p>
+    <div class="collapse" id="collapseContentclt3">
+      <p class="zp">
+        STATE : Bihar <br>
+        EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+      </p>
+      <div class="d-flex flex-row justify-content-center mb-2">
+        <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+        <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+      </div>
+    </div>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt3" aria-expanded="false" aria-controls="collapseContentclt3">
+      Read More
+    </button>
+  </div>
+
+</div>
+
+<div class="d-flex flex-row justify-content-center">
+
+<div id="Bagru" class="cult-bg mb-3">
+  <h1 class="hc"> Bagru Prints </h1>
+  <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+    <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/DJ8xXzbB87I?rel=0"></iframe>
+  </div>
+  <p class="card-text zp">Bagru - Traditional Printing Technique of Rajasthan || Hand Block Printing || Rajasthan ||<br></p>
+  <div class="collapse" id="collapseContentclt1">
+    <p  class="zp">
+      STATE : Bihar <br>
+      EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+    </p>
+    <div class="d-flex flex-row justify-content-center mb-2">
+      <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+      <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+    </div>
+  </div>
+  <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt1" aria-expanded="false" aria-controls="collapseContentclt1">
+    Read More
+  </button>
+</div>
+
+<div id="Warli" class="cult-bg ml-3 mb-3">
+  <h1 class="hc"> Warli Painting </h1>
+  <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+    <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/KQJKh7Bpbn4?rel=0"></iframe>
+  </div>
+  <p class="card-text zp"> Making of Warli Art by Warli tribe artisans - Maharashtra <br></p>
+  <div class="collapse" id="collapseContentclt4">
+    <p  class="zp">
+      STATE : Maharastra <br>
+      EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+    </p>
+    <div class="d-flex flex-row justify-content-center mb-2">
+      <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+      <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+    </div>
+  </div>
+  <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt4" aria-expanded="false" aria-controls="collapseContentclt4">
+    Read More
+  </button>
+</div>
+
+<div id="Lac" class="cult-bg ml-3 mb-3">
+  <h1 class="hc"> Lac bangles </h1>
+  <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+    <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/gvbLc08KrOw?rel=0"></iframe>
+  </div>
+  <p class="card-text zp"> Unveiling the Vibrant Lac Bangles Crafted by Jharkhand Tribals: India's Prized Artistic Gems <br></p>
+  <div class="collapse" id="collapseContentclt5">
+    <p  class="zp">
+      STATE : Jharkhand <br>
+      EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+      <div class="d-flex flex-row">
+        <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+       </div>
+    </p>
+    <div class="d-flex flex-row justify-content-center mb-2">
+      <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+      <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+    </div>
+  </div>
+  <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt5" aria-expanded="false" aria-controls="collapseContentclt5">
+    Read More
+  </button>
+</div>
+
+</div>
+</div>
+
+<div class="bg-cc mt-5 mb-3" style="border-color:#873b7d;">
+  <div class="mt-2 mb-2">
+  <h1 class="culh" style="color:#384fe0;"> cultural Practices : </h1>
+  </div>
+  <div class="d-flex flex-row justify-content-center">
+  
+    <div id="Ayurveda" class="cult-bg mb-3" style="background-color:#c1b6d1;">
+      <h1 class="hc" style="color:#6b5f03;">Ayurveda</h1>
+      <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+        <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/rUpFEKp2aLo?rel=0"></iframe>
+      </div>
+      <p class="card-text zp">Originating over 5,000 years ago, Ayurveda is a system of traditional medicine that focuses on holistic healing and maintaining a balance between mind, body, and spirit. It encompasses herbal medicine, diet, yoga, meditation, and various therapeutic practices. <br>
+      </p>
+      <div class="collapse" id="collapseContentclt10">
+        <p  class="zp">
+          EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+        </p>
+        <div class="d-flex flex-row justify-content-center mb-2">
+          <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+          <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+        </div>
+      </div>
+      <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt10" aria-expanded="false" aria-controls="collapseContentclt10">
+        Read More
+      </button>
+    </div>
+    
+    <div id="Vedas" class="cult-bg ml-3 mb-3" style="background-color:#c1b6d1;">
+      <h1 class="hc" style="color:#6b5f03;"> Vedas and Scriptures </h1>
+      <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+        <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/S1-17TeZvV0?rel=0"></iframe>
+      </div>
+      <p class="card-text zp"> India has a rich tradition of ancient texts such as the Vedas, Upanishads, Ramayana, Mahabharata, and Puranas, which serve as foundational scriptures for Hinduism and provide insights into philosophy, ethics, spirituality, and societal norms.<br>
+      </p>
+      <div class="collapse" id="collapseContentclt20">
+        <p  class="zp">
+          EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+        </p>
+        <div class="d-flex flex-row justify-content-center mb-2">
+          <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+          <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+        </div>
+      </div>
+      <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt20" aria-expanded="false" aria-controls="collapseContentclt20">
+        Read More
+      </button>
+    </div>
+  
+    <div id="Rituals" class="cult-bg ml-3 mb-3" style="background-color:#c1b6d1;">
+      <h1 class="hc" style="color:#6b5f03;"> Vedic Rituals and Ceremonies </h1>
+      <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+        <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/Vw9UjBa7WuQ?rel=0"></iframe>
+      </div>
+      <p class="card-text zp"> Ancient Indian society was deeply rooted in Vedic rituals and ceremonies. These included rites of passage such as birth ceremonies (samskaras), marriage rituals (vivaha), funeral rites (antyeshti), and various other religious ceremonies performed to appease gods and seek blessings.<br>
+      </p>
+      <div class="collapse" id="collapseContentclt30">
+        <p  class="zp">
+          EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+          <div class="d-flex flex-row">
+            <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+           </div>
+        </p>
+        <div class="d-flex flex-row justify-content-center mb-2">
+          <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+          <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+        </div>
+      </div>
+      <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt30" aria-expanded="false" aria-controls="collapseContentclt30">
+        Read More
+      </button>
+    </div>
+  
+  </div>
+  
+  <div class="d-flex flex-row justify-content-center">
+  
+  <div id="Yajnas" class="cult-bg mb-3" style="background-color:#c1b6d1;">
+    <h1 class="hc" style="color:#6b5f03;"> Yajnas and Sacrifices </h1>
+    <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+      <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/eM22rv_hq1Y?rel=0"></iframe>
+    </div>
+    <p class="card-text zp"> Yajna (fire ritual) and sacrifices were integral to ancient Indian religious practices. These rituals were performed to honor gods, seek their blessings, and maintain cosmic order. The fire (Agni) was considered a conduit between humans and gods.<br>
+    </p>
+    <div class="collapse" id="collapseContentclt40">
+      <p  class="zp">
+        EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+        <div class="d-flex flex-row">
+          <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+         </div>
+      </p>
+      <div class="d-flex flex-row justify-content-center mb-2">
+        <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+        <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+      </div>
+    </div>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt40" aria-expanded="false" aria-controls="collapseContentclt40">
+      Read More
+    </button>
+  </div>
+  
+  <div id="Sanskrit" class="cult-bg ml-3 mb-3" style="background-color:#c1b6d1;">
+    <h1 class="hc" style="color:#6b5f03;"> Sanskrit Language and Literature </h1>
+    <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+      <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/cY4NL3jcWBc?rel=0"></iframe>
+    </div>
+    <p class="card-text zp"> Sanskrit, an ancient Indo-European language, served as the language of intellectual discourse, religious texts, and literature in ancient India. It produced a vast corpus of literary works, including epics, poetry, dramas, and philosophical treatises.<br>
+    </p>
+    <div class="collapse" id="collapseContentclt50">
+      <p  class="zp">
+        EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+        <div class="d-flex flex-row">
+          <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+         </div>
+      </p>
+      <div class="d-flex flex-row justify-content-center mb-2">
+        <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+        <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+      </div>
+    </div>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt50" aria-expanded="false" aria-controls="collapseContentclt50">
+      Read More
+    </button>
+  </div>
+  
+  <div id="Gurukul" class="cult-bg ml-3 mb-3" style="background-color:#c1b6d1;">
+    <h1 class="hc" style="color:#6b5f03;"> Gurukul Education System </h1>
+    <div class="embed-responsive embed-responsive-16by9 mt-2 mb-2 vd">
+      <iframe class="embed-responsive-item vd" src="https://www.youtube.com/embed/VRDsfv56_B4?rel=0"></iframe>
+    </div>
+    <p class="card-text zp"> In ancient India, education was primarily imparted through the gurukul system, where students lived with their gurus (teachers) in ashrams and received instruction in various subjects including philosophy, literature, mathematics, science, and warfare.<br>
+    </p>
+    <div class="collapse" id="collapseContentclt60">
+      <p  class="zp">
+        EMAIL : &nbsp; xxxxxxxxxxx@gmail.com <br>
+        <div class="d-flex flex-row">
+          <p class="zp mr-2"> ADDRESS : &nbsp; Find me here </p>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHjQzce4OGWrzKP7lgCtxUuDSgexQ7FwPmf5y6d2m0w&s" class="mp mt-1"/>
+         </div>
+      </p>
+      <div class="d-flex flex-row justify-content-center mb-2">
+        <button class="btn btn-primary mr-2" onclick="display('sectionVt2')"> Review </button>
+        <button class="btn btn-success" onclick="display('sectionVt3')"> Want to Hire me ? </button>
+      </div>
+    </div>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseContentclt60" aria-expanded="false" aria-controls="collapseContentclt60">
+      Read More
+    </button>
+  </div>
+  
+  </div>
+
+  </div>
+
+<div class="text-center mb-5 mt-3">
+   <button class="btn btn-danger" onclick="display('sectionHome')"> Back </button>
+</div>
+
+</div>
+
+<div id="sectionarch">
+     
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand mb-2" href="#" onclick="display('sectionHome')">Culture Connect</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNava" aria-controls="navbarNava" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNava">
+            <div class="navbar-nav ml-auto">
+                <div class="mb-2 dropdown">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Types Of Architecture
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#indus">Indus Valley Civilization Architecture</a>
+                        <a class="dropdown-item" href="#vedic">Vedic Architecture</a>
+                        <a class="dropdown-item" href="#budh">Buddhist Architecture</a>
+                        <a class="dropdown-item" href="#hindu">Hindu Temple Architecture</a>
+                        <a class="dropdown-item" href="#ind-islam">Indo-Islamic Architecture</a>
+                        <a class="dropdown-item" href="#mughal">Mughal Architecture</a>
+                        <a class="dropdown-item" href="#south">South Indian Dravidian Architecture</a>
+                    </div>
+                </div>
+                <a class="nav-item">
+                <form class="form-inline ml-2 mb-1" role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+  <div>
+    <div class="d-flex flex-row justify-content-center">
+
+      <div id="indus" class="d-flex flex-column arch-bg mt-3 mb-3 mr-3">
+         <h1 class="hc"> Indus Valley Civilization Architecture </h1>
+
+          <div class="d-flex flex-row justify-content-center mb-2">
+            <div id="carouselIndicatrs1" class="vt-img carousel slide mr-2" data-ride="carousel">
+              <ol class="carousel-indicators">
+                  <li data-target="#carouselIndicatrs1" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselIndicatrs1" data-slide-to="1"></li>
+                  <li data-target="#carouselIndicatrs1" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="https://www.indianetzone.com/photos_gallery/78/Architecture_of_Indus_Valley_Civilisation.jpg" class="d-block vt-img" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                      <img src="https://www.harappa.com/sites/default/files/11074718_10153211671709846_8246006478318784705_n.jpg" class="d-block vt-img" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                      <img src="https://track2traininginstitute.files.wordpress.com/2023/12/main-qimg-efeae635dde6a3b4410e5f85493e9e9d-lq.jpg" class="d-block vt-img" alt="..." />
+                  </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselIndicatrs1" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselIndicatrs1" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+              </a>
+          </div>
+          </div>
+
+          <div>
+            <p class="zp"> Dating back to around 3300 BCE to 1300 BCE, the architecture of the Indus Valley Civilization (Harappan Civilization) is characterized by well-planned cities with advanced drainage systems, brick construction, and structures such as the Great Bath and the Mohenjo-Daro city grid.
+            </p>
+          </div>
+      </div>
+ 
+      <div id="vedic" class="d-flex flex-column arch-bg mt-3 mb-3">
+        <h1 class="hc"> Vedic Architecture </h1>
+
+         <div class="d-flex flex-row justify-content-center mb-2">
+           <div id="carouselIndicatrs2" class="vt-img carousel slide mr-2" data-ride="carousel">
+             <ol class="carousel-indicators">
+                 <li data-target="#carouselIndicatrs2" data-slide-to="0" class="active"></li>
+                 <li data-target="#carouselIndicatrs2" data-slide-to="1"></li>
+                 <li data-target="#carouselIndicatrs2" data-slide-to="2"></li>
+             </ol>
+             <div class="carousel-inner">
+                 <div class="carousel-item active">
+                     <img src="https://i.pinimg.com/originals/80/c6/34/80c634392066504bf092df2f4f874ce9.jpg" class="d-block vt-img" alt="..." />
+                 </div>
+                 <div class="carousel-item">
+                     <img src="https://templearchitecture.com/wp-content/uploads/2019/12/78851512_113324633477798_2352410608005021696_n.jpg" class="d-block vt-img" alt="..." />
+                 </div>
+                 <div class="carousel-item">
+                     <img src="https://ideal-india.in/img/maharishiji_ideal_india_sthapatya_veda_01.jpg" class="d-block vt-img" alt="..." />
+                 </div>
+             </div>
+             <a class="carousel-control-prev" href="#carouselIndicatrs2" role="button" data-slide="prev">
+                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                 <span class="sr-only">Previous</span>
+             </a>
+             <a class="carousel-control-next" href="#carouselIndicatrs2" role="button" data-slide="next">
+                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                 <span class="sr-only">Next</span>
+             </a>
+         </div>
+         </div>
+
+         <div>
+          <p class="zp"> 
+            This architecture is associated with the early Vedic period (1500 BCE - 600 BCE) and includes structures such as sacrificial fire altars (Yajna), which were central to Vedic rituals.
+          </p>
+         </div>
+     </div>
+
+      </div>
+
+      <div class="d-flex flex-row justify-content-center">
+
+        <div id="budh" class="d-flex flex-column arch-bg mt-3 mb-3 mr-3">
+           <h1 class="hc"> Buddhist Architecture </h1>
+  
+            <div class="d-flex flex-row justify-content-center mb-2">
+              <div id="carouselIndicatrs3" class="vt-img carousel slide mr-2" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselIndicatrs3" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselIndicatrs3" data-slide-to="1"></li>
+                    <li data-target="#carouselIndicatrs3" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://architecturehum1100.weebly.com/uploads/2/5/1/7/25176060/1919672.gif?537" class="d-block vt-img" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://qph.cf2.quoracdn.net/main-qimg-16a5f8731de388c04a9f150423347293-lq" class="d-block vt-img" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04.jpg/1200px-Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04.jpg" class="d-block vt-img" alt="..." />
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselIndicatrs3" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselIndicatrs3" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            </div>
+  
+            <div>
+              <p class="zp"> 
+                Originating around the 3rd century BCE, Buddhist architecture includes stupas (mound-like structures containing relics), viharas (monasteries), and chaityas (prayer halls). Famous examples include the Great Stupa at Sanchi and the Ajanta and Ellora Caves.
+              </p>
+            </div>
+        </div>
+   
+        <div id="hindu" class="d-flex flex-column arch-bg mt-3 mb-3">
+          <h1 class="hc"> Hindu Temple Architecture </h1>
+  
+           <div class="d-flex flex-row justify-content-center mb-2">
+             <div id="carouselIndicatrs4" class="vt-img carousel slide mr-2" data-ride="carousel">
+               <ol class="carousel-indicators">
+                   <li data-target="#carouselIndicatrs4" data-slide-to="0" class="active"></li>
+                   <li data-target="#carouselIndicatrs4" data-slide-to="1"></li>
+                   <li data-target="#carouselIndicatrs4" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <img src="https://5.imimg.com/data5/XE/XL/KT/SELLER-14996472/temple-architecture.jpg" class="d-block vt-img" alt="..." />
+                   </div>
+                   <div class="carousel-item">
+                       <img src="https://vedicfeed.com/wp-content/uploads/2019/04/Temple-Architechture-1.jpg" class="d-block vt-img" alt="..." />
+                   </div>
+                   <div class="carousel-item">
+                       <img src="https://archi-monarch.com/wp-content/uploads/2022/09/COMPONENTS-OF-HINDU-TEMPLE.webp" class="d-block vt-img" alt="..." />
+                   </div>
+               </div>
+               <a class="carousel-control-prev" href="#carouselIndicatrs4" role="button" data-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselIndicatrs4" role="button" data-slide="next">
+                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Next</span>
+               </a>
+           </div>
+           </div>
+  
+           <div>
+            <p class="zp"> 
+              This architecture flourished from the 4th century CE onwards and is characterized by intricate temple designs, including shikharas (towering spires), mandapas (pillared halls), and garbhagrihas (inner sanctums). Prominent styles include Nagara, Dravida, and Vesara. Examples include the temples at Khajuraho, Konark, and Hampi.
+            </p>
+           </div>
+       </div>
+  
+        </div>
+       
+        <div class="d-flex flex-row justify-content-center">
+
+          <div id="ind-islam" class="d-flex flex-column arch-bg mt-3 mb-3 mr-3">
+             <h1 class="hc"> Indo-Islamic Architecture </h1>
+    
+              <div class="d-flex flex-row justify-content-center mb-2">
+                <div id="carouselIndicatrs5" class="vt-img carousel slide mr-2" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                      <li data-target="#carouselIndicatrs5" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselIndicatrs5" data-slide-to="1"></li>
+                      <li data-target="#carouselIndicatrs5" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="https://www.india-a2z.com/images/Indo-Islamic-architecture.jpg" class="d-block vt-img" alt="..." />
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://kanikajainblog.files.wordpress.com/2016/02/picture1.png" class="d-block vt-img" alt="..." />
+                      </div>
+                      <div class="carousel-item">
+                          <img src="https://cdn.mindspritesolutions.com/examrace/Study-Material/Indian-Art-and-Culture/posts/Indo-Islamic-Architecture-Pietra-Dura-and-Arabesque-Method/Features-of-Indo-Islamic-16.webp" class="d-block vt-img" alt="..." />
+                      </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselIndicatrs5" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselIndicatrs5" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+              </div>
+    
+              <div>
+                <p class="zp">
+                  This style emerged with the arrival of Islamic rulers in the Indian subcontinent from the 12th century onwards. It combines elements of Islamic architecture (such as domes, minarets, and arches) with indigenous Indian styles. Examples include the Qutub Minar in Delhi and the Taj Mahal in Agra.
+                </p>
+              </div>
+          </div>
+     
+          <div id="mughal" class="d-flex flex-column arch-bg mt-3 mb-3">
+            <h1 class="hc"> Mughal Architecture </h1>
+    
+             <div class="d-flex flex-row justify-content-center mb-2">
+               <div id="carouselIndicatrs6" class="vt-img carousel slide mr-2" data-ride="carousel">
+                 <ol class="carousel-indicators">
+                     <li data-target="#carouselIndicatrs6" data-slide-to="0" class="active"></li>
+                     <li data-target="#carouselIndicatrs6" data-slide-to="1"></li>
+                     <li data-target="#carouselIndicatrs6" data-slide-to="2"></li>
+                 </ol>
+                 <div class="carousel-inner">
+                     <div class="carousel-item active">
+                         <img src="https://cdn.britannica.com/82/133582-050-1B2986D4/Badshahi-Mosque-Lahore-Pakistan.jpg" class="d-block vt-img" alt="..." />
+                     </div>
+                     <div class="carousel-item">
+                         <img src="https://static.prepp.in/public/image/f5f742786b480a844aeee01ba92287a8.png?tr=w-512,h-446,c-force" class="d-block vt-img" alt="..." />
+                     </div>
+                     <div class="carousel-item">
+                         <img src="https://media.biltrax.com/wp-content/uploads/2022/04/Elements-of-Mughal-architecture.jpeg" class="d-block vt-img" alt="..." />
+                     </div>
+                 </div>
+                 <a class="carousel-control-prev" href="#carouselIndicatrs6" role="button" data-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                 </a>
+                 <a class="carousel-control-next" href="#carouselIndicatrs6" role="button" data-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                 </a>
+             </div>
+             </div>
+    
+             <div>
+              <p class="zp"> 
+                Flourishing during the Mughal Empire (16th to 19th centuries), this style is known for its grandeur, symmetry, and use of marble and red sandstone. Key features include bulbous domes, intricate carvings, and expansive gardens. Famous examples include the Red Fort and Jama Masjid in Delhi, and the Fatehpur Sikri complex.
+              </p>
+             </div>
+         </div>
+       </div>
+
+       <div class="d-flex flex-row justify-content-center">
+         <div id="south" class="d-flex flex-column arch-bg mt-3 mb-3">
+          <h1 class="hc"> South Indian Dravidian Architecture </h1>
+ 
+           <div class="d-flex flex-row justify-content-center mb-2">
+             <div id="carouselIndicatrs7" class="vt-img carousel slide mr-2" data-ride="carousel">
+               <ol class="carousel-indicators">
+                   <li data-target="#carouselIndicatrs7" data-slide-to="0" class="active"></li>
+                   <li data-target="#carouselIndicatrs7" data-slide-to="1"></li>
+                   <li data-target="#carouselIndicatrs7" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <img src="https://bep-wordpress.byjusexamprep.com/wp-content/uploads/2023/03/06075710/Hindu-Temple-Architecture.png" class="d-block vt-img" alt="..." />
+                   </div>
+                   <div class="carousel-item">
+                       <img src="https://i0.wp.com/www.re-thinkingthefuture.com/wp-content/uploads/2021/02/A3428-Evolution-timeline-of-South-Indian-Architecture-..jpg?w=999" class="d-block vt-img" alt="..." />
+                   </div>
+                   <div class="carousel-item">
+                       <img src="https://i.pinimg.com/564x/67/fc/58/67fc58d82d81f30659984c56538bf750.jpg" class="d-block vt-img" alt="..." />
+                   </div>
+               </div>
+               <a class="carousel-control-prev" href="#carouselIndicatrs7" role="button" data-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#carouselIndicatrs7" role="button" data-slide="next">
+                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="sr-only">Next</span>
+               </a>
+           </div>
+           </div>
+ 
+           <div>
+             <p class="zp">
+              Predominant in the southern part of India, this style is characterized by towering gopurams (entrance gateways), ornate sculptures, and vast temple complexes. Prominent examples include the Meenakshi Temple in Madurai and the Brihadeeswarar Temple in Thanjavur.
+            </p>
+           </div>
+       </div>
+       </div>
+    </div>
+
+
+    <div class="d-flex flex-row justify-content-center mb-3 mt-1"> 
+      <button class="btn btn-danger" onclick="display('sectionHome')"> Back </button>
+    </div>
+  </div>
+ 
+ <div id="sectionVt2">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#" onclick="display('sectionHome')"> Culture Connect </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarvAlt1" aria-controls="navbarvAlt1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarvAlt1">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" href="#heritage-tours"> Heritage Tours  <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#cultural-exploration"> Cultural Exploration </a>
+            <a class="nav-link" href="#architecture"> Architecture in art and culture </a>
+               <form role="search">
+                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+               </form>
+            </div>
+          </div>
+    </nav>
+    </header>
+  
+  
+          <div id="content33">
+      <div class="container my-5">
+              <div class="jumbotron">
+                  <h1 class="display-4">Submit Your Information</h1>
+                  <p class="lead">Please fill out the form below.</p>
+                  <form>
+                      <div class="mb-3">
+                          <label for="location" class="form-label">Location</label>
+                          <input type="text" class="form-control" id="location44" placeholder="Enter location">
+                      </div>
+                      <div class="mb-3">
+                          <label for="estimatedCost" class="form-label">Estimated Cost</label>
+                          <input type="number" class="form-control" id="estimatedCost33" placeholder="Enter estimated cost">
+                      </div>
+                      <div class="mb-3">
+                          <label for="transportationFacility" class="form-label">Transportation Facility</label>
+                          <input type="text" class="form-control" id="transportationFacilit44y" placeholder="Enter transportation facility">
+                      </div>
+                      <div class="mb-3">
+                          <label for="photos" class="form-label">Photos</label>
+                          <input type="file" class="form-control" id="photos44" multiple>
+                      </div>
+                      <div class="mb-3">
+                          <label for="videos" class="form-label">Videos</label>
+                          <input type="file" class="form-control" id="videos44" multiple>
+                      </div>
+                      <div class="mb-3">
+                          <label for="description" class="form-label">Description</label>
+                          <textarea class="form-control" id="description88" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                          <label for="timings" class="form-label">Timings etc</label>
+                          <input type="text" class="form-control" id="timings66" placeholder="Enter timings">
+                      </div>
+                      <div class="d-flex flex-row justify-content-center">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button class="btn btn-primary ml-2" onclick="display('sectioncult')"> Back </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      
+      
+          <footer>
+              <p>Contact us: artsquare@email.com</p>
+          </footer>
+  </div>
+  
+ <div id="sectionVt3">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#" onclick="display('sectionHome')"> Culture Connect </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarvA" aria-controls="navbarvA" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarvA">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" href="#heritage-tours"> Heritage Tours  <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#cultural-exploration"> Cultural Exploration </a>
+            <a class="nav-link" href="#architecture"> Architecture in art and culture </a>
+               <form role="search">
+                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+               </form>
+            </div>
+          </div>
+    </nav>
+    </header>
+  
+  
+          <div id="cont">
+      <div class="container my-5">
+              <div class="jumbotron">
+                  <h1 class="display-4">Submit Your Information</h1>
+                  <p class="lead">Please fill out the form below.</p>
+                  <form>
+                      <div class="mb-3">
+                          <label for="location" class="form-label"> Name </label>
+                          <input type="text" class="form-control" id="location2" placeholder="Enter your Name">
+                      </div>
+                      <div class="mb-3">
+                          <label for="estimatedCost" class="form-label"> Organisation </label>
+                          <input type="number" class="form-control" id="estimatedCost2" placeholder="Enter your Name of the Organization">
+                      </div>
+                      <div class="mb-3">
+                          <label for="transportationFacility" class="form-label"> Program </label>
+                          <input type="text" class="form-control" id="transportationFacility2" placeholder="Enter Your Program Name">
+                      </div>
+                      <div class="mb-3">
+                          <label for="photos" class="form-label"> Number of days </label>
+                          <input type="text" class="form-control" id="transporta2" placeholder="Enter The Total Number of Days I have to work for you">
+                      </div>
+                      <div class="mb-3">
+                          <label for="videos" class="form-label"> Phone Number </label>
+                           <input type="text" class="form-control" id="phonenum2" placeholder="Enter Your Phone Number">
+                      </div>
+                      <div class="mb-3">
+                          <label for="description" class="form-label"> Additional Information</label>
+                          <textarea class="form-control" id="Anything2" placeholder="Anything you want to convey More" rows="3"></textarea>
+                      </div>
+                      <div class="d-flex flex-row justify-content-center">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button class="btn btn-primary ml-2" onclick="display('sectioncult')"> Back </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      
+      
+          <footer>
+              <p>Contact us: artsquare@email.com</p>
+          </footer>
+  </div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"> </script>
+<script src="index.js"></script>
+</body>
+
+</html>
